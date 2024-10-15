@@ -12,7 +12,6 @@ export class AppService {
   adminMail = this._configService.get<string>('ADMIN_MAIL');
   appPassword = this._configService.get<string>('APP_PASSWORD');
   subject = this._configService.get<string>('MAIL_SUBJECT');
-  limitPrice = this._configService.get<number>('LIMIT_PRICE');
   
   async executeSecretSanta(app: App): Promise<void> {
     const { recipients: senders, exclusions } = app;
